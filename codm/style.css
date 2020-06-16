@@ -1,0 +1,18 @@
+.header{
+    text-align: center;
+    background-color: white;
+}
+
+
+.carousel .carousel-item{
+    max-height: 590px;
+}
+nav a{
+    font-size: 1.3rem;
+}
+nav{
+    background-color: rgba(128, 128, 128, 0.808) ;
+}
+.footer{
+    background-color: gray;
+}
