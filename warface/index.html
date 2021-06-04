@@ -11,11 +11,11 @@
     <title>Warface</title>
     <style>
         .my-bg {
-            background-color: rgb(250, 82, 82);
+            background-color: rgb(188, 155, 240);
         }
 
         .my-bg {
-            background-color: rgb(243, 84, 84);
+            background-color: rgb(188, 155, 240);
         }
 
         .slider {
@@ -64,10 +64,80 @@
         .sell-wrap {
             padding: 20px;
         }
+
+        .ratio {
+            box-shadow: 0 0 20px black;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .my-anim-left {
+            transform: translateX(-120%);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .activ-anim-left {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .my-anim-right {
+            transform: translateX(200%);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .activ-anim-right {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+
+        .my-anim-top {
+            transform: translateY(-100%);
+            opacity: 0;
+            transition: 1s .5s;
+        }
+
+        .activ-anim-top {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .my-anim-bottom {
+            transform: translateY(200%);
+            opacity: 0;
+            transition: 1s .5s;
+        }
+
+        .activ-anim-bottom {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            z-index: 1060;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
+    <div id='preloader'>
+        <img src="loading.png" alt="">
+    </div>
     <div class="container">
         <div class="row justify-content-between header-1 my-bg">
             <div class="col-md-3 d-flex mb-3">
@@ -94,7 +164,7 @@
         <div class="container">
             <div class="row my-bg">
                 <div class="col-lg-4 sell-wrap">
-                    <div class="sell-1 h-100">
+                    <div class="sell-1 h-100 my-anim-left">
                         <h3>Розробка гри</h3>
                         <p>Warface був розроблений київським філіалом Crytek - Crytek Kiev.</p>
                         <p>25 листопада 2010 року відбувся офіційний анонс Warface.</p>
@@ -109,11 +179,17 @@
                     </div>
                 </div>
                 <div class="col-lg-4 sell-wrap">
-                    <div class="sell-1 h-100">
+                    <div class="sell-1 h-100 my-anim-right">
                         <h3>Ігрові класи</h3>
                         <p>Штурмовик, Медик, Инженер, Снайпер, СЭД</p>
                         <img src="123321.png" class="img-fluid" alt="">
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p></p>
+                    <h1>Скіни на оружие</h1>
                 </div>
             </div>
             <div class="row justify-content-center ps-0 pe-0">
@@ -133,7 +209,79 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center mb-5 pe-0">
+                <div class="col ps-0 ms-0 pe-0 me-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/6q1ksEJh1Yg" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="container-fluid banner-2">
+        <div class="container">
+            <div class="row my-bg">
+                <div class="col-lg-4 sell-wrap">
+                    <div class="sell-1 h-100">
+                        <h3>Сили сторін</h3>
+                        <p>Warface - В 2012 году организация «Blackwood» развязала серию вооруженных конфликтов с целью
+                            контроля над ресурсами и установления нового мирового порядка. Отряду «Warface» приказано
+                            остановить их. </p>
+                        <p>Blackwood - террористическая организация, которая занимается незаконной торговлей оружия,
+                            распространением коррупции мирового масштаба, испытаниями над людьми, убийством мирных
+                            жителей.</p>
+                        <img src="blackwood.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 sell-wrap">
+                    <div class="sell-1 h-100">
+                        <h3>PVE-Місії</h3>
+                        <p>Об'єднайте сили з друзями, щоб знищити численних ворогів, керованих ІІ. У PvE-місіях ви
+                            можете грати загоном до 5 гравців, виконуючи завдання в різних точках світу. Кожен день
+                            завдання змінюються, і гравці будь-якого рівня зможуть підібрати місію до смаку!</p>
+                        <p>ВЧІТЬСЯ</p>
+                        <p>ПРАЦЮЙТЕ У КОМАНДІ</p>
+                        <p>ОТРИМУЙТЕ СПІЛЬНІ НАГОРОДИ</p>
+                        <img src="pve.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 sell-wrap">
+                    <div class="sell-1 h-100">
+                        <h3>Особливості</h3>
+                        <p>Сучасний двiжок CRYENGINE</p>
+                        <p>Широкі ігрові можливості</p>
+                        <p>Безліч режимів і нескінченне досконалість</p>
+                        <img src="cryengine.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="container-fluid banner-2">
+        <div class="container">
+            <div class="row my-bg">
+                <div class="col sell-wrap">
+                    <div class="sell-1 h-100 text-center">
+                        <h2>МІСЦЕ ДІЇ</h2>
+                        <p>Воював на Балканах в спробах зупинити програму важкого озброєння Blackwood, зупиніть
+                            експансії у містах Азії, зупиніть експерименти над людьми в південноамериканських фавели і
+                            запобігти захопленню нафтових регіонів на Близькому Сході. І це лише ВЕРХІВКА АЙСБЕРГА ...
+                            Розкрийте найжахливіші таємниці всемогутній корпорації із загоном WARFACE!</p>
+                        <img src="loc.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-white p-4">
+        <b>Сторінку зробив - Мельниченко Максим</p>
     </div>
 
 
@@ -188,7 +336,7 @@
     </script>
 
 
-    <script src="1-1.js"></script>
+    <script src="bober.js"></script>
 </body>
 
 </html>
